@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*root usado para declarar a variavel, para declarar tem que usar o (--) e tb e configurações globais*/
+:root {
+    --cor0: #5D7880;
+    --cor1: #A8EBFF;
+    --cor2: #49AECC;
+    --cor3: #5CD9FF;
+    --cor4: #2E6C80;
+    --cor5: #2173AD;
+    --cor6: #0532AD;
+
+    --font-padrao: arial, verdana, Helvetica, sans-serif;
+    --font-destaque: font-family: 'Bebas Neue', 'cursive';
+    --font-android: 'android', 'cursive';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* por organização seguir a ordem do html*/
+body {
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+a.externo::after {
+    content: '\00A0\1f517';
+}
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+header > h1 {
+    color: white;
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+header > p {
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+nav {
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+nav > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+nav a:hover {
+    background-color: var(--cor3);
+    color: var(--cor4);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/*Todos os paragrafos dentro do main*/
+/*margem do paragrafo na ordem de: cima, direita, baixo, esquerda*/
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+main strong {
+    color: var(--cor5);
+    font-weight: bold;
+}
+main a {
+    text-decoration: none; 
+    font-weight: bold;
+    color: var(--cor4);
+    background-color: var(--cor1);
+    padding: 2px 6px 2px 6px;
+}
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
+/*Para imagens se ajustarem em posição precisa colocar um display block nelas*/
+main img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+/*h1 dentro do main*/
+main h1 {
+    color: var(--cor6);
+    font-family: var(--font-android);
+    font-size: 1.8em;
+}
+main h2 {
+    font-family: var(--font-android);
+    color: var(--cor5);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    font-size: 1.5em;
+}
+aside {
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.329);
+}
+aside h3 {
+    background-color: var(--cor3);
+    color: white;
+    margin: -10px -10px 0px -10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 5px;
+}
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+div.video {
+    background-color: var(--cor4);
+    margin: 0px -30px 20px -30px;
+    padding: 20px;
+    padding-bottom: 47%;
+    position: relative;
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+.final {
+    text-align: center;
+}
+p {
+    font-size: 18px;
+}

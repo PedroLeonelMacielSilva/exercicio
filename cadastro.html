@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        } 
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+}
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            animation: gradient 50s ease infinite;
+            background-image: linear-gradient(to right, aqua, lightskyblue, rgb(60, 60, 240));
+            background-size: 300% 300%;
+        }
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+        main {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgb(0, 0, 255);
+            padding: 30px 0px 0px 30px;
+            margin: auto;
+            width: 800px;
+            min-height: 300px;
+            padding-left: 50px;
+        }
+        div.botom > input {
+            padding: 5px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: rgba(0, 0, 0, 0.658);
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça aqui seu cadastro</h1>
+    <main>
+        <p>
+            <form>
+                <div>
+                    <label for="nome"><strong>Nome:</strong> </label>
+                    <input type="text" id="nome" placeholder="Digite seu Nome">
+                    <label for="sobrenome"><strong>Sobrenome:</strong> </label>
+                    <input type="text" id="Sobrenome" placeholder="Digite seu Sobrenome"><br><br>
+                </div>
+                <div>
+                    <label for="Telefone"><strong>Telefone:</strong> </label>
+                    <input type="text" id="telefone" placeholder="Digite seu Telefone"><br><br>
+                </div>
+                <div>
+                    <label for="dt de nascimento"><strong>DT de Nascimento:</strong> </label>
+                    <input type="text" id="dt de nascimento" placeholder="dt/ms/ano."><br><br>
+                </div>
+                <div>
+                    <label for="pai"><strong>Nome do Pai:</strong> </label>
+                    <input type="text" id="Pai" placeholder="Digite o nome do seu pai"><br><br>
+                </div>
+                <div>
+                    <label for="mae"><strong>Nome da Mãe:</strong> </label>
+                    <input type="text" id="telefone" placeholder="Digite o nome da sua Mãe"><br><br>
+                </div>
+                <div>
+                    <label for="Email"><strong>Email:</strong> </label>
+                    <input type="text" id="Email" placeholder="Digite Seu Email"><br><br>
+                </div>
+                <div>
+                    <label for="Email"><strong>Confirme seu Email:</strong> </label>
+                    <input type="text" id="Email" placeholder="Digite Seu Email"><br><br>
+                </div>
+                <div>
+                    <label for="Senha"><strong>Senha:</strong> </label>
+                    <input type="text" id="Senha" placeholder="Digite sua senha"><br><br>
+                </div>
+                <div>
+                    <label for="Senha"><strong>Confirme sua Senha</strong> </label>
+                    <input type="text" id="Senha" placeholder="Digite sua senha"><br><br>
+                </div>
+                <div class="botom"><input type="submit" nome="Cadastro" value="Cadastro"> <input type="reset" nome="limpar" value="limpar tudo"></div>
+            </form>
+        </p>
+    </main>
+</body>
+</html>
