@@ -12,10 +12,6 @@
     --cor4: #2E6C80;
     --cor5: #2173AD;
     --cor6: #0532AD;
-
-    --font-padrao: arial, verdana, Helvetica, sans-serif;
-    --font-destaque: font-family: 'Bebas Neue', 'cursive';
-    --font-android: 'android', 'cursive';
 } 
 body {
     background-color: var(--cor0);
