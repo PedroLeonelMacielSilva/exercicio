@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-/*root usado para declarar a variavel, para declarar tem que usar o (--) e tb e configurações globais*/
+* {
+    margin: 0px;
+    padding: 0px;
+  }
 :root {
     --cor0: #5D7880;
     --cor1: #A8EBFF;
@@ -13,60 +16,56 @@
     --font-padrao: arial, verdana, Helvetica, sans-serif;
     --font-destaque: font-family: 'Bebas Neue', 'cursive';
     --font-android: 'android', 'cursive';
-}
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-/* por organização seguir a ordem do html*/
+} 
 body {
     background-color: var(--cor0);
     font-family: var(--font-padrao);
-}
-a.externo::after {
-    content: '\00A0\1f517';
-}
-header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
-    min-height: 150px;
-    text-align: center;
-    padding-top: 40px;
-}
-header > h1 {
-    color: white;
-    font-family: var(--font-destaque);
-    margin-bottom: 20px;
-    font-size: 3em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
-}
-header > p {
-    color: white;
-    font-family: var(--font-padrao);
-    font-size: 1.2em;
-    max-width: 600px;
-    padding-right: 10px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    margin: auto;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
-}
-nav {
-    background-color: var(--cor4);
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
-}
-nav > a {
-    color: white;
+}  
+a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
+    transition: 0.3s;
 }
-nav a:hover {
-    background-color: var(--cor3);
-    color: var(--cor4);
-    border-radius: 5px;
-    transition-duration: 0.5s;
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 10vh;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
 }
 main {
     min-width: 300px;
@@ -77,9 +76,9 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    margin-bottom: -40px;
+    
 }
-/*Todos os paragrafos dentro do main*/
-/*margem do paragrafo na ordem de: cima, direita, baixo, esquerda*/
 main p {
     margin: 15px 0px 15px 0px;
     text-align: justify;
@@ -102,13 +101,11 @@ main a:hover {
     text-decoration: underline;
     color: var(--cor3);
 }
-/*Para imagens se ajustarem em posição precisa colocar um display block nelas*/
 main img {
     width: 80%;
     margin: auto;
     display: block;
 }
-/*h1 dentro do main*/
 main h1 {
     color: var(--cor6);
     font-family: var(--font-android);
@@ -135,9 +132,127 @@ div.video > iframe {
     width: 90%;
     height: 90%;
 }
-.final {
-    text-align: center;
-}
 p {
     font-size: 18px;
+}
+aside {
+    background-color: var(--cor4);
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+aside h3 {
+    background-color: var(--cor5);
+    color: white;
+    margin: -10px -10px 0px -10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+aside ul {
+    list-style-position: inside;
+    columns: 2;
+    padding-top: 20px;
+    color: transparent;
+}
+aside a {
+    color: white;
+    text-decoration: none;
+}
+aside li {
+    padding-bottom: 4px;
+}
+aside a:hover {
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: bold;
+    transition-duration: 0.2s;
+    padding-top: 2px;
+}
+aside p.telefone {
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: -21px;
+    margin-left: 20px;
+}
+aside p.telefone:hover {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+aside p.telefone:hover::after {
+    content: ': (87)99948-6838';
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+aside p.email {
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: -21px;
+    margin-left: 20px;
+}
+aside p.email:hover {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+aside p.email:hover::after {
+    content: ': pedroleonelmaciel.hotmail@gmail.com';
+}
+@media (max-width: 999px) {
+body {
+    overflow-x: hidden;
+}
+.nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 40vw;
+    height: 30vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+}
+.nav-list li {
+    margin-left: 0;
+    opacity: 0;
+}
+.mobile-menu {
+    display: block;
+}
+}
+
+.nav-list.active {
+transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+from {
+    opacity: 0;
+    transform: translateX(50px);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+.mobile-menu.active .line1 {
+transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+transform: rotate(45deg) translate(-5px, -7px);
 }
